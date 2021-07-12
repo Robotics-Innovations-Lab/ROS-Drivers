@@ -1,7 +1,7 @@
-# UR5-ROS
+# ROS-Drivers
 
 ## About
-Contains ROS packages handling the ROS interface with UR5.
+Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot and AG95 gripper.
 
 ## Setting up the interface
 
