@@ -4,3 +4,7 @@
 [submodule "AG95-ROS"]
 	path = AG95-ROS
 	url = https://github.com/RIL-IISc/AG95-ROS.git
+[submodule "fmauch_universal_robot"]
+	path = fmauch_universal_robot
+	url = https://github.com/fmauch/universal_robot.git
+	branch = calibration_devel
