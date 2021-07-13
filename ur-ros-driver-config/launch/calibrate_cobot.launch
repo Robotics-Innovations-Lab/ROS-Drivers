@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_ip" default="192.168.0.100" doc="IP address by which the robot can be reached."/>
+  <arg name="target_filename" default="$(find ur-ros-driver-config)/config/ur5_calibration.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
+
+  <include file="$(find ur_calibration)/launch/calibration_correction.launch" pass_all_args="true"/>
+  
+</launch>
