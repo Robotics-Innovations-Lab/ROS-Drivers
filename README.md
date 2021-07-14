@@ -1,7 +1,7 @@
 # ROS-Drivers
 
 ## About
-Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot and AG95 gripper.
+Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG95 gripper, and IntelRealsense camera.
 
 ## Initializing the drivers
 
@@ -24,6 +24,12 @@ Use the python script that will be developed in the future
 4. Launch the driver to run the gripper.
     ```bash
     roslaunch dh_gripper_driver dh_gripper.launch
+    ```
+
+## Publishing camera_link
+1. After performing all the aforementioned steps
+    ```bash
+    roslaunch ur-ros-driver-config calibrate_camera.launch
     ```
 
 > To control the cobot, get the repository [ur5-ag95-resources]
