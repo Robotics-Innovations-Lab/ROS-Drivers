@@ -11,3 +11,6 @@
 [submodule "ur5_realsense_calibration"]
 	path = ur5_realsense_calibration
 	url = https://github.com/RIL-IISc/ur5_realsense_calibration.git
+[submodule "ur_msgs"]
+	path = ur_msgs
+	url = https://github.com/ros-industrial/ur_msgs.git
