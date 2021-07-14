@@ -8,3 +8,6 @@
 	path = fmauch_universal_robot
 	url = https://github.com/fmauch/universal_robot.git
 	branch = calibration_devel
+[submodule "ur5_realsense_calibration"]
+	path = ur5_realsense_calibration
+	url = https://github.com/RIL-IISc/ur5_realsense_calibration.git
