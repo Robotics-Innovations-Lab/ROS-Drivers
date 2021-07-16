@@ -14,17 +14,12 @@ Use the python script that will be developed in the future
     roslaunch ur-ros-driver-config calibrate_cobot.launch
     ```
 
-2. Launch the ROS controllers to drive the cobot.
+2. Launch the ROS controllers to drive the cobot and AG95 gripper.
     ```bash
     roslaunch ur-ros-driver-config spawn_controllers.launch
     ```
 
 3. Load the `ros_interface.urp` program on the UR5 polyscope to receive the control commands.
-
-4. Launch the driver to run the gripper.
-    ```bash
-    roslaunch dh_gripper_driver dh_gripper.launch
-    ```
 
 ## Publishing camera_link
 1. After performing all the aforementioned steps
