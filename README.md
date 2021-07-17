@@ -14,7 +14,12 @@ Use the python script that will be developed in the future
     roslaunch ur-ros-driver-config calibrate_cobot.launch
     ```
 
-2. Launch the ROS controllers to drive the cobot and AG95 gripper.
+2. Launch the ROS controllers to drive the cobot and AG95 gripper
+    ```bash
+    roslaunch ur-ros-driver-config spawn_controllers.launch launch_camera_topics:=false
+    ```
+
+    Launch the ROS controllers to drive the cobot, AG95 gripper, and RealSense camera topics
     ```bash
     roslaunch ur-ros-driver-config spawn_controllers.launch
     ```
@@ -22,9 +27,10 @@ Use the python script that will be developed in the future
 3. Load the `ros_interface.urp` program on the UR5 polyscope to receive the control commands.
 
 ## Publishing camera_link
+> There is no need to perform this step if you are launching `ur5_moveit_control.launch` file.
 1. After performing all the aforementioned steps
     ```bash
-    roslaunch ur-ros-driver-config calibrate_camera.launch
+    roslaunch ur-ros-driver-config calibrate_camera.launch.xml
     ```
 
 > To control the cobot, get the repository [ur5-ag95-resources]
