@@ -17,6 +17,7 @@
     <arg name="enable_accel" value="false"/>
     <arg name="pointcloud_texture_stream" value="RS2_STREAM_ANY"/>
     <arg name="filters" value="pointcloud"/>
+    <arg name="align_depth" value="true"/>
   </include>
   
 </launch>
