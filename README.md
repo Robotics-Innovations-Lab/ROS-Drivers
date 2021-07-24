@@ -3,6 +3,40 @@
 ## About
 Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG95 gripper, and IntelRealsense camera.
 
+## Build the driver sources
+0. Make sure you are at within the `src` folder of your catkin workspace.
+1.  Recursively clone this repository and it's submodules
+    ```bash
+    git clone --recursive https://github.com/RIL-IISc/ROS-Drivers.git
+    ```
+    Alternatively you could clone the repository and then update the submodules:
+    ```bash
+    git clone https://github.com/RIL-IISc/ROS-Drivers.git
+    git submodule update --init --recursive
+    ```
+2. Go to the top workspace directory 
+    ```bash
+    cd ../
+    ```
+3. Install the dependencies required by the submodules
+    ```bash
+    # UR5 driver dependencies
+    sudo apt update
+    rosdep update
+    rosdep install --from-paths src --ignore-src -y
+
+    # UR5 Intel RealSense calibration dependencies
+    sudo apt-get install ros-${ROS_DISTRO}-visp
+    sudo apt-get install ros-${ROS_DISTRO}-industrial-msgs
+    sudo apt-get install ros-${ROS_DISTRO}-ros-control ros-${ROS_DISTRO}-ros-controllers
+    ```
+4. Install Intel RealSense SDK 2.0 by following instructions from [here](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md).
+5. Build the workspace
+    ```bash
+    catkin_make
+    ```
+    > You might have to build the workspace multiple times with each time percentage of build increasing monotonically.
+
 ## Initializing the drivers
 
 ### Method 1: Easy way
