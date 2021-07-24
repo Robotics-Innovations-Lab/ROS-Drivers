@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <launch>
-    <!-- Setting calibration namespace -->
     <arg name="eye_on_hand" default="true" doc="if true, eye-on-hand instead of eye-on-base" />
     <arg name="namespace_prefix" default="ur5_realsense_handeyecalibration" doc="the prefix of the namespace the node will run in, and of the folder in which the result will be saved" />
     <arg if="$(arg eye_on_hand)" name="namespace" value="$(arg namespace_prefix)_eye_on_hand" doc="the namespace the node will run in, and the folder in which the result will be saved" />
@@ -12,15 +11,8 @@
     <arg name="tracking_base_frame" default="camera_link" />
     <arg name="tracking_marker_frame" default="tracking_target" />
     
-    <group ns="$(arg namespace)" >
-        <param name="eye_on_hand" value="$(arg eye_on_hand)"/>
-        <param name="robot_base_frame" value="$(arg robot_base_frame)" />
-        <param name="robot_effector_frame" value="$(arg robot_effector_frame)" />
-        <param name="tracking_base_frame" value="$(arg tracking_base_frame)" />
-        <param name="tracking_marker_frame" value="$(arg tracking_marker_frame)" />
-    </group>
-
     <arg name="inverse" default="false" />
+    <arg name="calibration_file" default="" />
     
     <!--publish hand-eye calibration-->
     <group ns="$(arg namespace)">
@@ -29,6 +21,7 @@
         <param if="$(arg eye_on_hand)" name="robot_effector_frame" value="$(arg robot_effector_frame)" />
         <param name="tracking_base_frame" value="$(arg tracking_base_frame)" />
         <param name="inverse" value="$(arg inverse)" />
+        <param name="calibration_file" value="$(arg calibration_file)" />
         <node name="$(anon handeye_publisher)" pkg="easy_handeye" type="publish.py" output="screen"/>
     </group>
     

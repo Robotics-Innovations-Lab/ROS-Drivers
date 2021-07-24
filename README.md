@@ -20,7 +20,7 @@ Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG
     ```
 3. Install the dependencies required by the submodules
     ```bash
-    # UR5 driver dependencies
+    # UR5 driver, AG95, and IntelRealsense dependencies
     sudo apt update
     rosdep update
     rosdep install --from-paths src --ignore-src -y
@@ -36,6 +36,11 @@ Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG
     catkin_make
     ```
     > You might have to build the workspace multiple times with each time percentage of build increasing monotonically.
+6. Provide permission to access AG95 gripper via port `/dev/ttyUSB0`. Follow instructions from [here](./AG95-ROS/README.md#setting-up-permissions).
+7. Download python libraries to access Intel RealSense.
+    ```bash
+    pip install pyrealsense2
+    ```
 
 ## Initializing the drivers
 
