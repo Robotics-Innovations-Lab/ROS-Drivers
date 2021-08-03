@@ -44,6 +44,9 @@ Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG
 
 ## Initializing the drivers
 
+### Step 0:
+Copy the file named `ur5_realsense_handeyecalibration_eye_on_hand.yaml` present in `ur-ros-driver-config/config` directory to `${HOME}/.ros/easy_handeye/`. Create the directories if required. Now follow one of the following methods:
+
 ### Method 1: Easy way
 Use the python script that will be developed in the future
 
