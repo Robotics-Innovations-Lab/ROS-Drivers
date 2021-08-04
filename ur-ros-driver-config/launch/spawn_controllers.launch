@@ -9,15 +9,6 @@
   <include file="$(find dh_gripper_driver)/launch/dh_gripper.launch"/>
 
   <!-- launch the camera topics -->
-  <include file="$(find realsense2_camera)/launch/rs_camera.launch" if="$(arg launch_camera_topics)">
-    <arg name="enable_fisheye" value="false"/>
-    <arg name="enable_infra1" value="false"/>
-    <arg name="enable_infra2" value="false"/>
-    <arg name="enable_gyro" value="false"/>
-    <arg name="enable_accel" value="false"/>
-    <arg name="pointcloud_texture_stream" value="RS2_STREAM_ANY"/>
-    <arg name="filters" value="pointcloud"/>
-    <arg name="align_depth" value="true"/>
-  </include>
+  <include file="$(find ur-ros-driver-config)/launch/camera_topics.launch.xml" if="$(arg launch_camera_topics)"/>
   
 </launch>
