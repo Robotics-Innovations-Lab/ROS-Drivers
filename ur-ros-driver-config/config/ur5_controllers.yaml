@@ -139,6 +139,17 @@ robot_status_controller:
    handle_name: industrial_robot_status_handle
    publish_rate: 10
 
+ur5_arm_controller:
+   type: position_controllers/JointPositionController
+   joint: shoulder_pan_joint
+   pid:
+      p: 5.0
+      i: 0.05
+      d: 0.1
+      i_clamp: 1
+   state_publish_rate: *loop_hz
+   action_monitor_rate: 20
+
 
 compliance_controller:
      type: velocity_controllers/ComplianceController
