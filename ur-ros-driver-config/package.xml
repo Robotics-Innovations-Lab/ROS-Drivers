@@ -12,6 +12,12 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <depend>image_transport</depend>
+  <depend>cv_bridge</depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
   <exec_depend>roslaunch</exec_depend>
   <exec_depend>ur_robot_driver</exec_depend>
   <exec_depend>ur_calibration</exec_depend>
