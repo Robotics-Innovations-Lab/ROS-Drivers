@@ -29,6 +29,9 @@ Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG
     sudo apt-get install ros-${ROS_DISTRO}-visp
     sudo apt-get install ros-${ROS_DISTRO}-industrial-msgs
     sudo apt-get install ros-${ROS_DISTRO}-ros-control ros-${ROS_DISTRO}-ros-controllers
+
+    # (optional: might not get installed with ros-controllers)
+    sudo apt install ros-${ROS_DISTRO}-rqt-joint-trajectory-controller
     ```
 4. Install Intel RealSense SDK 2.0 by following instructions from [here](https://github.com/IntelRealSense/librealsense/blob/development/doc/distribution_linux.md).
 5. Build the workspace
@@ -58,12 +61,12 @@ Use the python script that will be developed in the future
 
 2. Launch the ROS controllers to drive the cobot and AG95 gripper
     ```bash
-    roslaunch ur-ros-driver-config spawn_controllers.launch launch_camera_topics:=false
+    roslaunch ur-ros-driver-config spawn_controllers.launch
     ```
 
     Launch the ROS controllers to drive the cobot, AG95 gripper, and RealSense camera topics
     ```bash
-    roslaunch ur-ros-driver-config spawn_controllers.launch
+    roslaunch ur-ros-driver-config spawn_controllers.launch launch_camera_topics:=true
     ```
 
 3. Load the `ros_interface.urp` program on the UR5 polyscope to receive the control commands.
