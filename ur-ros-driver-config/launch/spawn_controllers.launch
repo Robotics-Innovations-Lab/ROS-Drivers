@@ -5,8 +5,9 @@
   <arg name="robot_ip" default="192.168.0.100" doc="IP address by which the robot can be reached."/>
   <arg name="kinematics_config" default="$(find ur-ros-driver-config)/config/ur5_calibration.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
   <arg name="controller_config_file" default="$(find ur-ros-driver-config)/config/ur5_controllers.yaml" doc="Custom controllers"/>
-  <arg name="controllers" default="joint_state_controller scaled_pos_joint_traj_controller" doc="Controllers that are activated by default."/>
-  
+  <arg name="controllers" default="joint_state_controller joint_group_vel_controller" doc="Controllers that are activated by default."/>
+  <arg name="stopped_controllers" default="pos_joint_traj_controller scaled_pos_joint_traj_controller" doc="Controllers that are initally loaded, but not started."/>
+
   <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch" pass_all_args="true"/>
   <include file="$(find dh_gripper_driver)/launch/dh_gripper.launch" if="$(arg launch_gripper_driver)"/>
 
