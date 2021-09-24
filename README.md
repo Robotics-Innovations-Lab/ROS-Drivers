@@ -7,11 +7,11 @@ Contains ROS packages that work as ROS drivers for interfacing the UR5 cobot, AG
 0. Make sure you are at within the `src` folder of your catkin workspace.
 1.  Recursively clone this repository and it's submodules
     ```bash
-    git clone --recursive https://github.com/RIL-IISc/ROS-Drivers.git
+    git clone --recursive https://github.com/Robotics-Innovations-Lab/ROS-Drivers.git
     ```
     Alternatively you could clone the repository and then update the submodules:
     ```bash
-    git clone https://github.com/RIL-IISc/ROS-Drivers.git
+    git clone https://github.com/Robotics-Innovations-Lab/ROS-Drivers.git
     git submodule update --init --recursive
     ```
 2. Go to the top workspace directory 
