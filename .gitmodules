@@ -1,16 +1,16 @@
 [submodule "Universal_Robots_ROS_Driver"]
 	path = Universal_Robots_ROS_Driver
-	url = https://github.com/RIL-IISc/Universal_Robots_ROS_Driver.git
+	url = https://github.com/Robotics-Innovations-Lab/Universal_Robots_ROS_Driver.git
 [submodule "AG95-ROS"]
 	path = AG95-ROS
-	url = https://github.com/RIL-IISc/AG95-ROS.git
+	url = https://github.com/Robotics-Innovations-Lab/AG95-ROS.git
 [submodule "fmauch_universal_robot"]
 	path = fmauch_universal_robot
 	url = https://github.com/fmauch/universal_robot.git
 	branch = calibration_devel
 [submodule "ur5_realsense_calibration"]
 	path = ur5_realsense_calibration
-	url = https://github.com/RIL-IISc/ur5_realsense_calibration.git
+	url = https://github.com/Robotics-Innovations-Lab/ur5_realsense_calibration.git
 [submodule "ur_msgs"]
 	path = ur_msgs
 	url = https://github.com/ros-industrial/ur_msgs.git
