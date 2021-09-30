@@ -9,5 +9,6 @@
     <arg name="pointcloud_texture_stream" value="RS2_STREAM_ANY"/>
     <arg name="filters" value="pointcloud"/>
     <arg name="align_depth" value="true"/>
+    <!-- <arg name="initial_reset" value="true"/> -->
   </include>
 </launch>
