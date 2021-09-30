@@ -14,8 +14,8 @@
   <arg name="stopped_controllers" value="pos_joint_traj_controller scaled_pos_joint_traj_controller" if="$(eval arg('joint_interface') == 'velocity')"/>
   
   <!-- selection controllers for position and action interface -->
-  <arg name="controllers" value="joint_state_controller scaled_pos_joint_traj_controller" if="$(eval arg('joint_interface') == 'position')"/>
-  <arg name="stopped_controllers" value="pos_joint_traj_controller joint_group_vel_controller" if="$(eval arg('joint_interface') == 'position')"/>
+  <arg name="controllers" value="joint_state_controller pos_joint_traj_controller scaled_pos_joint_traj_controller" if="$(eval arg('joint_interface') == 'position')"/>
+  <arg name="stopped_controllers" value="joint_group_vel_controller" if="$(eval arg('joint_interface') == 'position')"/>
 
   <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch" pass_all_args="true"/>
 
