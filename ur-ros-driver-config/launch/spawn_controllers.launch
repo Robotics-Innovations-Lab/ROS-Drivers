@@ -5,7 +5,7 @@
   <arg name="joint_interface" default="position" doc="position|velocity"/>
 
   
-  <arg name="robot_ip" value="192.168.0.100" doc="IP address by which the robot can be reached."/>
+  <arg name="robot_ip" value="192.168.144.100" doc="IP address by which the robot can be reached."/>
   <arg name="kinematics_config" value="$(find ur-ros-driver-config)/config/ur5_calibration.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
   <arg name="controller_config_file" value="$(find ur-ros-driver-config)/config/ur5_controllers.yaml" doc="Custom controllers"/>
   
